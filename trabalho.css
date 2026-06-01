@@ -1,0 +1,482 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+.container.navbar  .logotipo{
+    width: 72px;}
+.container{
+  width:90%;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  width:100%;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:20px 0;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.logo{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.logo h1{
+  font-size:42px;
+  font-weight:900;
+  color:#0ad66c;
+}
+
+.logo h1 span{
+  color:#d6a429;
+}
+
+.logo p{
+  font-size:14px;
+  color:#ddd;
+  letter-spacing:1px;
+}
+
+.menu{
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
+
+.menu a{
+  font-size:18px;
+  transition:.3s;
+}
+
+.menu a:hover{
+  color:#d6a429;
+}
+/* =========================
+   DROPDOWN CURSOS
+========================= */
+
+.menu{
+  display:flex;
+  align-items:center;
+  gap:40px;
+
+  list-style:none;
+}
+
+.dropdown{
+  position:relative;
+}
+
+.dropdown > a{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.dropdown-menu{
+
+  position:absolute;
+
+  top:45px;
+  left:0;
+
+  background:#0a0a0a;
+
+  min-width:280px;
+
+  border:1px solid #d4af37;
+
+  border-radius:10px;
+
+  padding:10px 0;
+
+  list-style:none;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(10px);
+
+  transition:0.3s;
+
+  z-index:999;
+}
+
+.dropdown-menu li a{
+
+  display:block;
+
+  padding:14px 20px;
+
+  color:#fff;
+
+  font-size:15px;
+
+  transition:0.3s;
+}
+
+.dropdown-menu li a:hover{
+
+  background:#d4af37;
+
+  color:#000;
+}
+
+/* ABRIR MENU */
+
+.dropdown:hover .dropdown-menu{
+
+  opacity:1;
+  visibility:visible;
+
+  transform:translateY(0);
+}
+.btn-whatsapp{
+  border:2px solid #d6a429;
+  padding:16px 28px;
+  border-radius:12px;
+  color:#d6a429;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:.3s;
+}
+
+.btn-whatsapp:hover{
+  background:#d6a429;
+  color:#000;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:70px 0 40px;
+}
+
+.hero h2{
+  font-size:64px;
+  line-height:1.2;
+  margin-bottom:20px;
+  color:#0ad66c;
+}
+
+.hero h2 span{
+  color:#d6a429;
+}
+
+.hero p{
+  color:#d9d9d9;
+  font-size:24px;
+  line-height:1.5;
+}
+
+/* CARDS */
+
+.courses{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:60px;
+}
+
+.card{
+  border:1px solid #b8860b;
+  border-radius:24px;
+  padding:40px 30px;
+  text-align:center;
+  background:rgba(255,255,255,0.01);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 30px rgba(214,164,41,0.2);
+}
+
+.icon{
+  width:110px;
+  height:110px;
+  border:1px solid #00d26a;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto 30px;
+  font-size:45px;
+  color:#00d26a;
+}
+
+.card h3{
+  font-size:32px;
+  margin-bottom:20px;
+
+  height:80px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+  line-height:1.2;
+
+  padding:0 10px;
+}
+.card p{
+  color:#d0d0d0;
+  font-size:22px;
+  line-height:1.5;
+  min-height:80px;
+}
+
+.divider{
+  width:100%;
+  height:1px;
+  background:#b8860b;
+  margin:30px 0;
+}
+
+.price-small{
+  font-size:28px;
+  margin-bottom:10px;
+  font-weight:bold;
+}
+
+.price{
+  font-size:58px;
+  color:#00d26a;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.credit{
+  color:#ddd;
+  font-size:22px;
+  margin-bottom:35px;
+}
+
+.btn-card{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  border:2px solid #d6a429;
+  border-radius:14px;
+  padding:7px;
+  color:#d6a429;
+  font-size:15px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn-card:hover{
+  background:#d6a429;
+  color:#000;
+}
+
+/* BENEFITS */
+
+.benefits{
+  margin-top:50px;
+  border:1px solid #00d26a;
+  border-radius:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  overflow:hidden;
+}
+
+.benefit{
+  padding:35px 30px;
+  border-right:1px solid rgba(255,255,255,0.08);
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+}
+
+.benefit:last-child{
+  border-right:none;
+}
+
+.benefit i{
+  color:#00d26a;
+  font-size:42px;
+  margin-top:5px;
+}
+
+.benefit h4{
+  color:#d6a429;
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.benefit p{
+  color:#ddd;
+  line-height:1.5;
+  font-size:18px;
+}
+
+/* CTA */
+
+.cta{
+  margin:50px auto 80px;
+  border:1px solid #b8860b;
+  border-radius:24px;
+  padding:30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.cta-left{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.cta-left i{
+  font-size:70px;
+  color:#00d26a;
+}
+
+.cta-left h3{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.cta-left p{
+  font-size:20px;
+  color:#ddd;
+}
+
+.cta-btn{
+  background:#d6a429;
+  color:#000;
+  padding:24px 40px;
+  border-radius:14px;
+  font-size:24px;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  transition:.3s;
+}
+
+.cta-btn:hover{
+  opacity:0.9;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:992px){
+
+  .hero h2{
+    font-size:22px;
+  }
+
+  .hero p{
+    font-size:20px;
+  }
+
+  .menu{
+    display:none;
+  }
+
+  /* AJUSTE DOS TÍTULOS DOS CARDS */
+
+.card{
+  border:1px solid #b8860b;
+  border-radius:24px;
+  padding:40px 25px;
+  text-align:center;
+  background:rgba(255,255,255,0.01);
+  transition:.3s;
+
+  display:flex;
+  flex-direction:column;
+}
+
+.card h3{
+  font-size:32px;
+  margin-bottom:20px;
+
+  height:80px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+  line-height:1.2;
+
+  padding:0 10px;
+}
+
+.card p{
+  color:#d0d0d0;
+  font-size:20px;
+  line-height:1.5;
+
+  height:100px;
+
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+
+  text-align:center;
+}
+
+@media(max-width:600px){
+
+  .hero h2{
+    font-size:20px;
+  }
+
+  .logo h1{
+    font-size:20px;
+  }
+
+  .btn-whatsapp{
+    margin-top:20px;
+  }
+
+  .price{
+    font-size:38px;
+  }
+
+  .btn-card{
+    font-size:20px;
+  }
+
+  .cta-left{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+/* LOGOTIPO */
+
